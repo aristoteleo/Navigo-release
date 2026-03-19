@@ -1,0 +1,59 @@
+Gene,CHD classification,classification
+Actc1,"ASD,VSD",Both
+Aff4,VSD with minor abnormalities,VSD_only
+Arid1a,"ASD,VSD,Obstructive lesions",Both
+Arid1b,"ASD with minor abnormalities,AVSD and variants",Both
+Dnah11,"ASD,AVSD and variants,Obstructive lesions,Malformation of outflow tracts,Functional single ventricle",Both
+Dnah5,"ASD,AVSD and variants,Heterotaxy",Both
+Eln,"ASD,Obstructive lesions",ASD_only
+Fbn1,Obstructive lesions,Other
+Flt4,Malformation of outflow tracts,Other
+Foxc1,"ASD,Malformation of outflow tracts",ASD_only
+Foxc2,"VSD with minor abnormalities,Malformation of outflow tracts",VSD_only
+Foxh1,"Malformation of outflow tracts,Heterotaxy",Other
+Foxp1,"ASD with minor abnormalities,AVSD and variants,Obstructive lesions,Functional single ventricle",Both
+Gata4,"ASD with minor abnormalities,VSD,AVSD and variants,Obstructive lesions,Malformation of outflow tracts,Functional single ventricle",Both
+Gata5,"ASD,VSD with minor abnormalities,Malformation of outflow tracts",Both
+Gata6,"ASD with minor abnormalities,AVSD and variants,Obstructive lesions,Malformation of outflow tracts",Both
+Gli3,"ASD,VSD,AVSD and variants,Obstructive lesions,Malformation of outflow tracts",Both
+Hand1,"VSD,Functional single ventricle",VSD_only
+Hand2,"VSD,Obstructive lesions,Malformation of outflow tracts",VSD_only
+Kdr,Malformation of outflow tracts,Other
+Kynu,"ASD with minor abnormalities,VSD with minor abnormalities,Malformation of outflow tracts,Functional single ventricle,Other",Both
+Meis2,"ASD,VSD,Obstructive lesions,Malformation of outflow tracts,Functional single ventricle,Other",Both
+Mesp1,"VSD,Malformation of outflow tracts",VSD_only
+Mybpc3,"ASD with minor abnormalities,VSD with minor abnormalities",Both
+Myh11,Other,Other
+Myh6,"ASD with minor abnormalities,VSD with minor abnormalities,Obstructive lesions,Malformation of outflow tracts",Both
+Myh7,"ASD,Other",ASD_only
+Nkx2-5,"ASD,VSD,AVSD and variants,Obstructive lesions,Malformation of outflow tracts,Functional single ventricle,Heterotaxy,Other",Both
+Nkx2-6,"VSD,Malformation of outflow tracts",VSD_only
+Nodal,"ASD with minor abnormalities,VSD with minor abnormalities,AVSD and variants,Obstructive lesions,Malformation of outflow tracts,Functional single ventricle,Heterotaxy,Other",Both
+Nr2f2,"ASD,AVSD and variants",Both
+Pbx1,"ASD with minor abnormalities,VSD with minor abnormalities,Malformation of outflow tracts",Both
+Pitx2,"ASD,VSD,Malformation of outflow tracts",Both
+Pkd1l1,"VSD,Obstructive lesions,Malformation of outflow tracts,Functional single ventricle,Heterotaxy,Other",VSD_only
+Prdm6,Other,Other
+Rere,"ASD with minor abnormalities,VSD with minor abnormalities",Both
+Sall1,"ASD,VSD,Obstructive lesions,Malformation of outflow tracts",Both
+Sall4,"VSD with minor abnormalities,Malformation of outflow tracts",VSD_only
+Smad2,"ASD with minor abnormalities,VSD with minor abnormalities,AVSD and variants,Obstructive lesions,Malformation of outflow tracts,Heterotaxy,Other",Both
+Smad3,"VSD with minor abnormalities,Obstructive lesions,Functional single ventricle",VSD_only
+Smad4,"ASD with minor abnormalities,VSD with minor abnormalities,Obstructive lesions",Both
+Smad6,Obstructive lesions,Other
+Smarce1,"ASD with minor abnormalities,Obstructive lesions,Heterotaxy,Other",ASD_only
+Son,"ASD with minor abnormalities,VSD with minor abnormalities",Both
+Tbx1,"VSD,Obstructive lesions,Malformation of outflow tracts",VSD_only
+Tbx20,"ASD with minor abnormalities,VSD with minor abnormalities,Obstructive lesions,Malformation of outflow tracts,Functional single ventricle",Both
+Tbx5,"ASD,VSD,AVSD and variants",Both
+Tfap2b,"Malformation of outflow tracts,Other",Other
+Tll1,"ASD with minor abnormalities,VSD with minor abnormalities",Both
+Zeb2,"ASD with minor abnormalities,VSD with minor abnormalities,Obstructive lesions",Both
+Zfpm2,Malformation of outflow tracts,Other
+Adamts19,"ASD with minor abnormalities,Malformation of outflow tracts",ASD_only
+Aldh1a2,Malformation of outflow tracts,Other
+Dnah9,Heterotaxy,Other
+Igf2,VSD with minor abnormalities,VSD_only
+Plxnd1,Malformation of outflow tracts,Other
+Sema3a,Other,Other
+Tbx3,VSD with minor abnormalities,VSD_only

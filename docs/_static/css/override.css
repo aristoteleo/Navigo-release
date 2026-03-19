@@ -1,0 +1,17 @@
+/* Hide visible scrollbars on display math blocks while preserving scrollability. */
+div.math,
+.math-wrapper,
+.MathJax_Display,
+mjx-container[display="true"] {
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+div.math::-webkit-scrollbar,
+.math-wrapper::-webkit-scrollbar,
+.MathJax_Display::-webkit-scrollbar,
+mjx-container[display="true"]::-webkit-scrollbar {
+    display: none;
+}

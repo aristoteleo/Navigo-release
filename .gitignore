@@ -1,0 +1,32 @@
+.DS_Store
+.ipynb_checkpoints/
+.mypy_cache/
+.pytest_cache/
+.venv/
+*.egg-info/
+*.log
+*.py[cod]
+__pycache__/
+
+build/
+dist/
+docs/_build/
+
+# Large local assets and generated artifacts
+checkpoints/
+data/
+docs/tutorials/outputs/
+
+# Common model and dataset formats that should not be committed
+*.h5ad
+*.pth
+*.pt
+*.ckpt
+*.npz
+*.npy
+
+# Legacy large resource copies now sourced from data/
+docs/tutorials/resources/grn/clean_code_for_github_heart/jacobian_dynamo.csv
+docs/tutorials/resources/grn/clean_code_for_github_heart/msigdb.v2025.1.Mm.json
+docs/tutorials/resources/knockout/gene_compensation_clean_github/public/msigdb.v2025.1.Mm.json
+Navigo_main.pdf

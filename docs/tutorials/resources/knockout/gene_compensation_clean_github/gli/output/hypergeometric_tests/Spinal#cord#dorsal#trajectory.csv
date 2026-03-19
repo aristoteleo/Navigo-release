@@ -1,0 +1,10 @@
+pathway_short,prediction,groundtruth
+EMT,0.5520905149106174,0.3656164823547685
+WNT,0.2857976001029281,-0.0
+TGF Beta,-0.0,-0.0
+PI3K/Akt/mTOR,-0.0,-0.0
+Notch,-0.0,-0.0
+Apoptosis,-0.0,-0.0
+Inflammatory,-0.0,0.15269579119521204
+Hedgehog,-0.0,-0.0
+G2M Checkpoint,-0.0,1.1425532064248227
