@@ -34,12 +34,6 @@ Read the core problem setting and modeling summary for the paper.
 Browse all tutorial sections, including interpolation, GRN, knockout, and reprogramming workflows.
 :::
 
-:::{grid-item-card} Repository Layout {octicon}`file-directory;1em;`
-:link: project_layout
-:link-type: doc
-
-See how the package, tutorials, and website source are organized in the unified repository.
-:::
 ::::
 
 ```{toctree}
@@ -50,6 +44,5 @@ See how the package, tutorials, and website source are organized in the unified 
 introduction/index
 installation
 tutorials/index
-project_layout
 references
 ```
