@@ -1,12 +1,12 @@
 # GRN Tutorials
 
-This section reproduces the **Navigo CHD regulatory program analysis** described in the Navigo study.
+This section shows how to use Navigo for **CHD regulatory program analysis**.
 
-Navigo is used here to perform CHD-focused perturbation simulation, organize response modules, and build downstream summaries for regulatory-network interpretation.
+The tutorial covers CHD-focused perturbation simulation, response-module organization, and downstream regulatory interpretation.
 
 ```{admonition} Runtime Note
 :class: note
-The notebook is designed for the Navigo package environment and expects the datasets/checkpoints from the Navigo tutorials workspace.
+The notebook expects the repository datasets and checkpoints under `data/` and `checkpoints/`.
 ```
 
 ```{toctree}

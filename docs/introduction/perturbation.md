@@ -1,6 +1,6 @@
 # Perturbation and GRN Analysis
 
-**Navigo can simulate genetic perturbations** by modifying selected genes in the initial state and then integrating the learned developmental field forward while maintaining those perturbations. Given a target gene set $G$, the perturbed initial state is written in the manuscript as
+**Navigo can simulate genetic perturbations** by modifying selected genes in the initial state and then integrating the learned developmental field forward while maintaining those perturbations. Given a target gene set $G$, the perturbed initial state is written as
 
 $$
 [x^{(i),\mathrm{pert}}_j]_g =
@@ -12,7 +12,7 @@ $$
 
 where $[\bar{x}^{(i),c}]_g$ is the mean expression of gene $g$ in the relevant cell type and $m$ controls perturbation strength. In this formulation, $m \leq 0$ corresponds to knockout-like perturbation and $m > 1$ corresponds to overexpression. Comparing perturbed and wild-type rollouts yields a **transcriptomic response profile** for the target gene or gene set.
 
-The manuscript then defines the perturbed and wild-type trajectories as
+The perturbed and wild-type trajectories are then defined as
 
 $$
 [x_j^{\mathrm{pert}}(t)]_g =

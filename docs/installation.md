@@ -2,7 +2,7 @@
 
 ## Quick install
 
-Navigo can be installed directly from this unified repository. We recommend using a virtual environment.
+Navigo can be installed directly from this repository. We recommend using a virtual environment.
 
 
 ```bash
@@ -24,4 +24,4 @@ sphinx-build -b html docs docs/_build/html
 - Package source lives in `navigo/`.
 - Tutorial notebooks live in `docs/tutorials/`.
 - Shared tutorial data and checkpoints live in `data/` and `checkpoints/`.
-- Website source lives in `docs/`.
+- Documentation source lives in `docs/`.

@@ -6,7 +6,7 @@ $$
 \tilde{x}^{(i+m)}_j = x^{(i)}_j + \int_{t_i}^{t_{i+m}} v(x_j(t), t)\,dt.
 $$
 
-This is the **forward simulation** mode described in the manuscript. It produces a predicted population by evolving the observed cells under the learned developmental field.
+This is the **forward simulation** mode. It produces a predicted population by evolving the observed cells under the learned developmental field.
 
 When observations are available at both flanking time points, Navigo also performs **aligned interpolation**. The model first simulates cells from the earlier time point to the later one:
 

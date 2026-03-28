@@ -1,15 +1,15 @@
 # Reprogramming Tutorials
 
-This section reproduces the **Navigo reprogramming analyses** described in the Navigo study.
+This section shows how to use Navigo for **cell-fate reprogramming analysis**.
 
-Navigo is used to simulate perturbation-driven transcriptomic changes from fibroblasts and rank candidate transcription factors for fate conversion. The two cases below match the paper narrative:
+The tutorials simulate perturbation-driven transcriptomic changes from fibroblasts and rank candidate transcription factors for fate conversion:
 
 1. Cardiac reprogramming mechanism analysis with pro-fibrotic inhibition effects.
 2. Neuronal TF screening and combinatorial ranking for fibroblast-to-neuron conversion.
 
 ```{admonition} Runtime Note
 :class: note
-The notebooks are designed for the Navigo package environment and expect the datasets/checkpoints from the Navigo tutorials workspace.
+The notebooks expect the repository datasets and checkpoints under `data/` and `checkpoints/`.
 ```
 
 ```{toctree}

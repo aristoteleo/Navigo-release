@@ -1,12 +1,12 @@
 # Knockout Tutorials
 
-This section reproduces the **Navigo knockout analyses** described in the Navigo study.
+This section shows how to use Navigo for **knockout analysis**.
 
-Navigo is used here to simulate lineage-resolved knockout responses, compare pathway-level and severity-level summaries, and review directional enrichment patterns for GLI-family compensation.
+The tutorials cover lineage-resolved knockout simulation, pathway-level comparison, severity analysis, and directional enrichment summaries.
 
 ```{admonition} Runtime Note
 :class: note
-The notebooks are designed for the Navigo package environment and expect the datasets and checkpoints from the Navigo tutorials workspace.
+The notebooks expect the repository datasets and checkpoints under `data/` and `checkpoints/`.
 ```
 
 ```{toctree}

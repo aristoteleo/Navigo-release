@@ -2,7 +2,7 @@
 
 This section walks through a compact **Navigo training and validation workflow** on a sampled mouse embryogenesis subset.
 
-The goal is to show the repository's end-to-end training path on a tutorial-scale dataset: subset sampling, GPU training with the standard `submission/main_navigo.py` entrypoint, and held-out intermediate-time validation with shared-embedding UMAP panels.
+The goal is to show the end-to-end training path on a tutorial-scale dataset: subset sampling, GPU training with `submission/main_navigo.py`, and held-out intermediate-time validation with shared-embedding UMAP panels.
 
 ```{admonition} Runtime Note
 :class: note

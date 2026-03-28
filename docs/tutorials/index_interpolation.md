@@ -1,12 +1,12 @@
 # Interpolation Tutorials
 
-This section reproduces the **Navigo interpolation and denoising analyses** described in the Navigo study.
+This section shows how to use Navigo for **interpolation and denoising analysis**.
 
-Navigo is used here both for held-out interpolation benchmarking across intermediate developmental stages and for myofibroblast denoising along the muscle trajectory with downstream proportion-, marker-, and pathway-level interpretation.
+The tutorials cover held-out interpolation benchmarking across intermediate developmental stages and myofibroblast denoising along the muscle trajectory.
 
 ```{admonition} Runtime Note
 :class: note
-The notebook is designed for the Navigo package environment and expects the datasets/checkpoints from the Navigo tutorials workspace.
+The notebooks expect the repository datasets and checkpoints under `data/` and `checkpoints/`.
 ```
 
 ```{toctree}

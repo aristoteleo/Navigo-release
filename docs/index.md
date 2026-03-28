@@ -1,6 +1,6 @@
-# Documentation
+# Navigo Documentation
 
-## Navigo: Generative Modeling of Mouse Embryogenesis
+## Generative Modeling of Mouse Embryogenesis
 
 Generative modeling of mouse embryogenesis, with applications in trajectory mapping, gene regulatory network probing, perturbation prediction, and cellular reprogramming.
 
@@ -24,14 +24,14 @@ Set up the Navigo environment and dependencies.
 :link: introduction/index
 :link-type: doc
 
-Read the core problem setting and modeling summary for the paper.
+Learn the core modeling ideas behind Navigo and how they connect to training, inference, and perturbation analysis.
 :::
 
 :::{grid-item-card} Tutorials {octicon}`book;1em;`
 :link: tutorials/index
 :link-type: doc
 
-Browse all tutorial sections, including interpolation benchmarks, training demos, GRN, knockout, and reprogramming workflows.
+Browse end-to-end tutorials for interpolation, training, GRN analysis, knockout analysis, and reprogramming.
 :::
 
 ::::

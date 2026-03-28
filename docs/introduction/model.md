@@ -1,6 +1,6 @@
 # Model Principles
 
-We follow the notation used in the manuscript. Let $T$ denote the number of observed developmental time points, with actual times $t_1, t_2, \dots, t_T$. For each time point $t_i$, let $X_i$ denote the observed cell population and let $x_j^{(i)}$ denote the $j$-th cell in that population.
+We use the following notation. Let $T$ denote the number of observed developmental time points, with actual times $t_1, t_2, \dots, t_T$. For each time point $t_i$, let $X_i$ denote the observed cell population and let $x_j^{(i)}$ denote the $j$-th cell in that population.
 
 For model training and inference, each cell is represented by its spliced and unspliced RNA state. We therefore write
 
@@ -19,11 +19,11 @@ $$
 The objective is to learn a field that explains how the populations $\{X_i\}_{i=1}^T$ are connected through continuous developmental dynamics.
 
 ```{figure} ../_static/paper_figures/model_arch.png
-:alt: Navigo model architecture from the paper
+:alt: Navigo model architecture
 :width: 100%
 :align: center
 
-Model architecture from Figure 1e of the Navigo paper. The network predicts kinetic terms and converts them into developmental velocities.
+Navigo model architecture. The network predicts kinetic terms and converts them into developmental velocities.
 ```
 
 Given a population $X_i$, the corresponding predicted next-time population is obtained by integrating the field:

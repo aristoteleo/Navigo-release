@@ -1,6 +1,0 @@
-Category,Distance_Rank_1,Distance_Rank_2,Distance_Rank_3,Distance_Rank_4,Distance_Rank_5,Gene_Rank_1,Gene_Rank_2,Gene_Rank_3,Gene_Rank_4,Gene_Rank_5
-Cluster 0,0.5208,0.6472,0.6683,0.692,0.7059,Gata4,Tbx5,Tbx20,Myh6,Prdm6
-Cluster 1,0.4557,0.5678,0.5817,0.6432,0.6671,Gli3,Tbx1,Foxc1,Fbn1,Dnah5
-Cluster 2,0.5542,0.6478,0.6561,0.689,0.7105,Hand1,Sall4,Hand2,Meis2,Pbx1
-Cluster 3,0.5906,0.6626,0.7271,0.8392,0.8402,Son,Arid1a,Zeb2,Rere,Igf2
-Overall,1.0673,1.0765,1.0849,1.0897,1.092,Hand1,Sall4,Gli3,Gata4,Hand2

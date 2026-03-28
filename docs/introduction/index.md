@@ -4,7 +4,7 @@ Embryonic development is orchestrated by complex gene regulatory networks, and l
 
 **Navigo is a generative model for developmental single-cell transcriptomics.** The core technical goal is to turn a temporal atlas of static scRNA-seq snapshots into a **continuous developmental vector field** that can be queried for trajectory mapping, temporal interpolation, denoising, perturbation simulation, and regulatory analysis.
 
-The method is built around two ideas from the Navigo manuscript:
+The method is built around two core ideas:
 
 1. Development should be modeled at the **molecular level** using RNA kinetics, so the learned velocity field is tied to transcription, splicing, and degradation rather than an arbitrary black-box transition function.
 2. Development should also be modeled at the **population level**, where the system must learn coherent transitions between time points even though destructive single-cell measurements do not provide true cell-to-cell correspondences across time.
