@@ -6,18 +6,18 @@ Tutorial notebooks live under `docs/tutorials/notebooks/`, while shared inputs a
 ::::{grid} 1 2 2 2
 :gutter: 2
 
-:::{grid-item-card} Interpolation
-:link: index_interpolation
-:link-type: doc
-
-Interpolation and denoising examples.
-:::
-
 :::{grid-item-card} Training Demo
 :link: index_training_demo
 :link-type: doc
 
 A compact training example.
+:::
+
+:::{grid-item-card} Interpolation
+:link: index_interpolation
+:link-type: doc
+
+Interpolation and denoising examples.
 :::
 
 :::{grid-item-card} GRN
@@ -45,8 +45,8 @@ Reprogramming examples.
 ```{toctree}
 :maxdepth: 2
 
-index_interpolation
 index_training_demo
+index_interpolation
 index_grn
 index_knockout
 index_reprogramming
