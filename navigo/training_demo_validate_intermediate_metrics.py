@@ -120,6 +120,7 @@ def create_validation_plot(metrics_df, figure_path):
     axes[1].bar(summary.index, summary.values, color=colors, alpha=0.9)
     axes[1].set_ylabel("Mean earth mover distance")
     axes[1].set_title("Average EMD across held-out timepoints")
+    axes[1].set_ylim(bottom=4.0)
     axes[1].tick_params(axis="x", rotation=30)
     axes[1].spines["top"].set_visible(False)
     axes[1].spines["right"].set_visible(False)
