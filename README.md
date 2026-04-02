@@ -88,6 +88,6 @@ If you use Navigo in your work, please cite the manuscript:
 ```bibtex
 @misc{fan_navigo,
   title={Generative Modeling of Mouse Embryogenesis for Fate and Disease Prediction},
-  author={Yimin Fan and Xinyuan Liu and Yixuan Wang and Xiaojie Qiu and Yu Li}
+  author={Yimin Fan and Xinyuan Liu and Yixuan Wang and Zehua Zeng and Lei Li and Xiaojie Qiu and Yu Li}
 }
 ```
