@@ -76,11 +76,11 @@ To run the tutorials locally, download the tutorial asset bundles referenced in 
 
 ## Repository Structure
 
-- `navigo/`: **installable Python package**.
-- `docs/`: Sphinx/MyST documentation source.
-- `docs/tutorials/notebooks/`: end-to-end tutorial notebooks.
-- `docs/tutorials/resources/`: helper scripts, reference assets, and legacy analysis materials.
-- `submission/`: submission-time entrypoints and helper scripts.
+- `navigo/`: installable Python package with the core modeling and analysis code.
+- `docs/`: Sphinx/MyST documentation source for the main site and tutorial pages.
+- `docs/tutorials/notebooks/`: end-to-end tutorial notebooks used throughout the documentation.
+- `data/` and `checkpoints/`: local tutorial assets expected by the notebooks and training demo.
+- `submission/`: command-line entrypoints and helper scripts, including the docs sync utility.
 
 ## Citation
 
