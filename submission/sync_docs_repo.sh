@@ -96,6 +96,7 @@ sphinx-build -b html . _build/html
 Read the Docs is configured through `.readthedocs.yaml` at the repository root.
 EOF
 
+export TARGET_REPO="$target_repo"
 python3 <<'PY'
 import os
 import re

@@ -16,6 +16,8 @@ docs/_build/
 # Large local assets and generated artifacts
 checkpoints/
 data/
+checkpoints.tar.gz
+data.tar.gz
 docs/tutorials/outputs/
 docs/tutorials/resources/interpolation/outputs/
 

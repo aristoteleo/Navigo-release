@@ -1,0 +1,73 @@
+name: Sync Navigo Docs
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "docs/**"
+      - "submission/sync_docs_repo.sh"
+      - ".github/workflows/sync-navigo-docs.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sync-navigo-docs-main
+  cancel-in-progress: true
+
+jobs:
+  sync-docs:
+    if: github.repository == 'fym0503/Navigo-release'
+    runs-on: ubuntu-latest
+    env:
+      DOCS_REPO: fym0503/Navigo-docs
+    steps:
+      - name: Check out Navigo-release
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check docs token
+        env:
+          DOCS_PUSH_TOKEN: ${{ secrets.NAVIGO_DOCS_PUSH_TOKEN }}
+        run: |
+          if [[ -z "$DOCS_PUSH_TOKEN" ]]; then
+            echo "NAVIGO_DOCS_PUSH_TOKEN is not set."
+            echo "Create a fine-grained PAT with contents:read/write access to $DOCS_REPO and add it as a repository secret."
+            exit 1
+          fi
+
+      - name: Check out Navigo-docs
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ env.DOCS_REPO }}
+          token: ${{ secrets.NAVIGO_DOCS_PUSH_TOKEN }}
+          path: Navigo-docs
+          fetch-depth: 0
+
+      - name: Sync docs into Navigo-docs
+        run: bash submission/sync_docs_repo.sh "$GITHUB_WORKSPACE/Navigo-docs"
+
+      - name: Detect docs changes
+        id: changes
+        working-directory: Navigo-docs
+        run: |
+          if [[ -n "$(git status --short)" ]]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit and push docs sync
+        if: steps.changes.outputs.changed == 'true'
+        working-directory: Navigo-docs
+        env:
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Sync docs from Navigo-release@${SOURCE_SHA::7}"
+          git push origin HEAD:main
