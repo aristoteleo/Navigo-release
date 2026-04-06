@@ -10,7 +10,8 @@ The notebooks expect the repository datasets and checkpoints under `data/` and `
 ```
 
 ```{toctree}
-:maxdepth: 1
+:maxdepth: 0
+:titlesonly:
 
 notebooks/knockout_section/01_Navigo_KO_Limb_Pathway_Enrichment_executed
 notebooks/knockout_section/02_Navigo_KO_Simulation_Experimental_Panels_executed

@@ -10,7 +10,8 @@ The notebooks expect the repository datasets and checkpoints under `data/` and `
 ```
 
 ```{toctree}
-:maxdepth: 1
+:maxdepth: 0
+:titlesonly:
 
 notebooks/interpolation_section/01_Navigo_Interpolation_Benchmarking_executed
 notebooks/interpolation_section/02_Navigo_Interpolation_Denoising_executed
