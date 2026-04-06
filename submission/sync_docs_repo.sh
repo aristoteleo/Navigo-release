@@ -122,6 +122,7 @@ def write(path: Path, content: str) -> None:
 
 conf_path = target / "conf.py"
 conf_text = conf_path.read_text(encoding="utf-8")
+conf_text = conf_text.replace("PROJECT_ROOT = HERE.parent", "PROJECT_ROOT = HERE")
 conf_text = re.sub(
     r'exclude_patterns\s*=\s*\[[^\]]*\]',
     """exclude_patterns = [
