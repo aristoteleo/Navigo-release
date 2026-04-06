@@ -123,9 +123,10 @@ def write(path: Path, content: str) -> None:
 conf_path = target / "conf.py"
 conf_text = conf_path.read_text(encoding="utf-8")
 conf_text = conf_text.replace("PROJECT_ROOT = HERE.parent", "PROJECT_ROOT = HERE")
-conf_text = conf_text.replace(
-    "        def __exit__(self, exc_type, exc, tb):\n            return False\n",
-    """        def __exit__(self, exc_type, exc, tb):
+if "class _DummyAnnData:" not in conf_text:
+    conf_text = conf_text.replace(
+        "        def __exit__(self, exc_type, exc, tb):\n            return False\n",
+        """        def __exit__(self, exc_type, exc, tb):
             return False
 
     class _DummyAnnData:
@@ -136,18 +137,20 @@ conf_text = conf_text.replace(
             self.layers = kwargs.get("layers", {})
             self.obsm = kwargs.get("obsm", {})
 """,
-)
-conf_text = conf_text.replace(
-    '    torch_nn_func_mod = types.ModuleType("torch.nn.functional")\n',
-    """    torch_nn_func_mod = types.ModuleType("torch.nn.functional")
+    )
+if '    torch_utils_mod = types.ModuleType("torch.utils")\n' not in conf_text:
+    conf_text = conf_text.replace(
+        '    torch_nn_func_mod = types.ModuleType("torch.nn.functional")\n',
+        """    torch_nn_func_mod = types.ModuleType("torch.nn.functional")
     torch_utils_mod = types.ModuleType("torch.utils")
     torch_utils_data_mod = types.ModuleType("torch.utils.data")
     anndata_mod = types.ModuleType("anndata")
 """,
-)
-conf_text = conf_text.replace(
-    "    torch_nn_func_mod.sigmoid = lambda value, *args, **kwargs: value\n",
-    """    torch_nn_func_mod.sigmoid = lambda value, *args, **kwargs: value
+    )
+if '    anndata_mod.AnnData = _DummyAnnData\n' not in conf_text:
+    conf_text = conf_text.replace(
+        "    torch_nn_func_mod.sigmoid = lambda value, *args, **kwargs: value\n",
+        """    torch_nn_func_mod.sigmoid = lambda value, *args, **kwargs: value
     torch_utils_data_mod.Dataset = object
     torch_utils_data_mod.DataLoader = object
     torch_utils_mod.data = torch_utils_data_mod
@@ -156,15 +159,16 @@ conf_text = conf_text.replace(
     anndata_mod.read_h5ad = lambda *args, **kwargs: _DummyAnnData()
     anndata_mod.read = anndata_mod.read_h5ad
 """,
-)
-conf_text = conf_text.replace(
-    '    sys.modules.setdefault("torch.nn.functional", torch_nn_func_mod)\n',
-    """    sys.modules.setdefault("torch.nn.functional", torch_nn_func_mod)
+    )
+if '    sys.modules.setdefault("anndata", anndata_mod)\n' not in conf_text:
+    conf_text = conf_text.replace(
+        '    sys.modules.setdefault("torch.nn.functional", torch_nn_func_mod)\n',
+        """    sys.modules.setdefault("torch.nn.functional", torch_nn_func_mod)
     sys.modules.setdefault("torch.utils", torch_utils_mod)
     sys.modules.setdefault("torch.utils.data", torch_utils_data_mod)
     sys.modules.setdefault("anndata", anndata_mod)
 """,
-)
+    )
 conf_text = re.sub(
     r'exclude_patterns\s*=\s*\[[^\]]*\]',
     """exclude_patterns = [
