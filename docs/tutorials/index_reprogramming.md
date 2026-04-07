@@ -13,8 +13,9 @@ The notebooks expect the repository datasets and checkpoints under `data/` and `
 ```
 
 ```{toctree}
-:maxdepth: 1
+:maxdepth: 0
+:titlesonly:
 
-notebooks/reprogramming_section/01_Navigo_Cardiac_Reprogramming_Inhibition
-notebooks/reprogramming_section/02_Navigo_Neuron_Reprogramming_Screening
+notebooks/reprogramming_section/01_Navigo_Cardiac_Reprogramming_Inhibition_executed
+notebooks/reprogramming_section/02_Navigo_Neuron_Reprogramming_Screening_executed
 ```

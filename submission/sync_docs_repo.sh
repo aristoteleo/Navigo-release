@@ -24,10 +24,16 @@ fi
 
 repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 source_docs="$repo_root/docs"
+source_pkg="$repo_root/navigo"
 target_repo="$(cd "$1" && pwd)"
 
 if [[ ! -d "$source_docs" ]]; then
   echo "Source docs directory not found: $source_docs" >&2
+  exit 1
+fi
+
+if [[ ! -d "$source_pkg" ]]; then
+  echo "Source package directory not found: $source_pkg" >&2
   exit 1
 fi
 
@@ -52,6 +58,11 @@ rsync -a --delete \
   --exclude 'tutorials/outputs/' \
   --exclude 'tutorials/resources/interpolation/outputs/' \
   "$source_docs"/ "$target_repo"/
+
+rsync -a --delete \
+  --exclude '__pycache__/' \
+  --exclude '*.pyc' \
+  "$source_pkg"/ "$target_repo/navigo"/
 
 cat > "$target_repo/.readthedocs.yaml" <<'EOF'
 version: 2
@@ -111,6 +122,53 @@ def write(path: Path, content: str) -> None:
 
 conf_path = target / "conf.py"
 conf_text = conf_path.read_text(encoding="utf-8")
+conf_text = conf_text.replace("PROJECT_ROOT = HERE.parent", "PROJECT_ROOT = HERE")
+if "class _DummyAnnData:" not in conf_text:
+    conf_text = conf_text.replace(
+        "        def __exit__(self, exc_type, exc, tb):\n            return False\n",
+        """        def __exit__(self, exc_type, exc, tb):
+            return False
+
+    class _DummyAnnData:
+        def __init__(self, *args, **kwargs):
+            self.obs = kwargs.get("obs")
+            self.var = kwargs.get("var")
+            self.uns = kwargs.get("uns", {})
+            self.layers = kwargs.get("layers", {})
+            self.obsm = kwargs.get("obsm", {})
+""",
+    )
+if '    torch_utils_mod = types.ModuleType("torch.utils")\n' not in conf_text:
+    conf_text = conf_text.replace(
+        '    torch_nn_func_mod = types.ModuleType("torch.nn.functional")\n',
+        """    torch_nn_func_mod = types.ModuleType("torch.nn.functional")
+    torch_utils_mod = types.ModuleType("torch.utils")
+    torch_utils_data_mod = types.ModuleType("torch.utils.data")
+    anndata_mod = types.ModuleType("anndata")
+""",
+    )
+if '    anndata_mod.AnnData = _DummyAnnData\n' not in conf_text:
+    conf_text = conf_text.replace(
+        "    torch_nn_func_mod.sigmoid = lambda value, *args, **kwargs: value\n",
+        """    torch_nn_func_mod.sigmoid = lambda value, *args, **kwargs: value
+    torch_utils_data_mod.Dataset = object
+    torch_utils_data_mod.DataLoader = object
+    torch_utils_mod.data = torch_utils_data_mod
+
+    anndata_mod.AnnData = _DummyAnnData
+    anndata_mod.read_h5ad = lambda *args, **kwargs: _DummyAnnData()
+    anndata_mod.read = anndata_mod.read_h5ad
+""",
+    )
+if '    sys.modules.setdefault("anndata", anndata_mod)\n' not in conf_text:
+    conf_text = conf_text.replace(
+        '    sys.modules.setdefault("torch.nn.functional", torch_nn_func_mod)\n',
+        """    sys.modules.setdefault("torch.nn.functional", torch_nn_func_mod)
+    sys.modules.setdefault("torch.utils", torch_utils_mod)
+    sys.modules.setdefault("torch.utils.data", torch_utils_data_mod)
+    sys.modules.setdefault("anndata", anndata_mod)
+""",
+    )
 conf_text = re.sub(
     r'exclude_patterns\s*=\s*\[[^\]]*\]',
     """exclude_patterns = [
