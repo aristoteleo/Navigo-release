@@ -1,9 +1,4 @@
-#!/bin/bash
-#SBATCH --time=4:00:00
-#SBATCH --account=ctb-liyue
-#SBATCH --ntasks=1
-#SBATCH --gres=gpu:1
-#SBATCH --mem=125G
+
 
 set -euo pipefail
 
